@@ -43,5 +43,8 @@
       "version_requirement": ">= 4.0.0 < 5.0.0"
     }
   ],
-  "description": "Jupyterhub module."
+  "description": "Jupyterhub module.",
+  "pdk-version": "1.14.1",
+  "template-url": "pdk-default#1.14.1",
+  "template-ref": "1.14.1-0-g0b5b39b"
 }
