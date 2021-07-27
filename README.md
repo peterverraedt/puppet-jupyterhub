@@ -102,6 +102,53 @@ jupyterhub::systemdspawner_default_shell: ~
 jupyterhub::systemdspawner_enable: false
 jupyterhub::systemdspawner_isolate_devices: false
 jupyterhub::systemdspawner_isolate_tmp: false
+jupyterhub::systemdspawner_mem_limit: 'None'
+jupyterhub::systemdspawner_user_workingdir: /home/{USERNAME}
+jupyterhub::batchspawner_enable: false
+jupyterhub::batchspawner_allowed_users: []
+jupyterhub::batchspawner_commands_enable: false
+jupyterhub::batchspawner_commands:
+  - '/usr/bin/qsub'
+  - '/usr/bin/qdel'
+  - '/usr/bin/qstat'
+jupyterhub::batchspawner_torque_enable: false
+jupyterhub::batchspawner_nprocs: ~
+jupyterhub::batchspawner_queue: ~
+jupyterhub::batchspawner_host: ~
+jupyterhub::batchspawner_node: '1'
+jupyterhub::batchspawner_partition: ~
+jupyterhub::batchspawner_qos: '{qos}'
+jupyterhub::batchspawner_runtime: ~
+jupyterhub::batchspawner_command: ~
+jupyterhub::batchspawner_memory: ~
+jupyterhub::batchspawner_module_path: ~
+jupyterhub::batchspawner_module_python: ~
+jupyterhub::wrapspawner_enable: false
+jupyterhub::custom_packages_enable: false
+jupyterhub::custom_packages:
+  - numpy
+  - scipy
+  - matplotlib
+  - pycurl
+jupyterhub::admin_access: false
+jupyterhub::cleanup_proxy: false
+jupyterhub::cleanup_servers: false
+jupyterhub::spawner_cmd: ~
+jupyterhub::spawner_default_url: ~
+jupyterhub::spawner_notebook_dir: ~
+jupyterhub::authenticator_admin_users: []
+jupyterhub::kernelrestarter_restart_limit: ~
+jupyterhub::kernelmanager_autorestart: true
+
+jupyterhub::pip_version_jupyter: 1.0.0
+jupyterhub::pip_version_jupyterhub: 1.4.1
+jupyterhub::pip_version_sudospawner: 0.5.2
+jupyterhub::pip_version_systemdspawner: 0.15.0
+jupyterhub::pip_version_batchspawner: 1.1.0
+jupyterhub::pip_version_wrapspawner: 1.0.0
+jupyterhub::pip_version_oauthenticator: 14.0.0
+jupyterhub::pip_version_requests_oauthlib: 1.3.0
+jupyterhub::pip_version_jupyterhub_ldapauthenticator: 1.3.2
 ```
 
 ## Limitations
