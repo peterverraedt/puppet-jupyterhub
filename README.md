@@ -54,75 +54,54 @@ Following parameters are available, and are the defaults:
 ```yaml
 jupyterhub::allowed_users: ~
 jupyterhub::base_url: /
-jupyterhub::base_url: /
-jupyterhub::batchspawner_command: ~
-jupyterhub::batchspawner_commands:
-  - '/usr/bin/qdel'
-  - '/usr/bin/qstat'
-  - '/usr/bin/qsub'
-jupyterhub::batchspawner_commands_enable: false
-jupyterhub::batchspawner_enable: false
-jupyterhub::batchspawner_host: ~
-jupyterhub::batchspawner_memory: ~
-jupyterhub::batchspawner_module_path: ~
-jupyterhub::batchspawner_module_python: ~
-jupyterhub::batchspawner_node: '1'
-jupyterhub::batchspawner_nprocs: ~
-jupyterhub::batchspawner_qos: '{qos}'
-jupyterhub::batchspawner_queue: ~
-jupyterhub::batchspawner_runtime: ~
-jupyterhub::batchspawner_torque_enable: false
-jupyterhub::config_dir: /etc/jupyter
+jupyterhub::cfhproxy_command: '/usr/lib/node_modules/configurable-http-proxy/bin/configurable-http-proxy'
+jupyterhub::cfhproxy_should_start: true
+jupyterhub::cfhproxy_auth_token: ~
 jupyterhub::cookie_secret_file: ~
-jupyterhub::custom_packages:
-  - matplotlib
-  - numpy
-  - scipy
-jupyterhub::custom_packages_enable: false
-jupyterhub::debug_enable: false
+jupyterhub::config_dir: /etc/jupyter
 jupyterhub::epel_enable: true
-jupyterhub::hub_ip: "%{facts.networking.ip}"
-jupyterhub::hub_port: 7001
+jupyterhub::debug_enable: false
 jupyterhub::ip: "%{facts.networking.ip}"
 jupyterhub::jupyterhub_dir: /opt/jupyterhub
 jupyterhub::jupyterhub_group: 'jupyter'
 jupyterhub::jupyterhub_username: 'jupyter'
+jupyterhub::ldap_enable: false
+jupyterhub::manage_config: true
 jupyterhub::manage_git: true
 jupyterhub::oauth_callback_url: ~
 jupyterhub::oauth_client_id: ~
 jupyterhub::oauth_client_secret: ~
 jupyterhub::oauth_create_system_users: false
-jupyterhub::oauth_custom_enable: false
-jupyterhub::oauth_enable: false
+jupyterhub::oauth_name: 'MyOAuthenticator'
 jupyterhub::oauth_full_name: 'oauthenticator.MyOAuthenticator'
+jupyterhub::oauth_enable: false
+jupyterhub::oauth_custom_enable: false
 jupyterhub::oauth_github_client_id: ~
 jupyterhub::oauth_github_client_secret: ~
 jupyterhub::oauth_github_enable: false
-jupyterhub::oauth_name: 'MyOAuthenticator'
 jupyterhub::port: 7000
+jupyterhub::hub_port: 7001
+jupyterhub::hub_ip: "%{facts.networking.ip}"
 jupyterhub::proxy_api_port: ~
-jupyterhub::python_version: 'system'
 jupyterhub::pyvenv: /opt/jupyterhub/pyvenv
+jupyterhub::python_version: 'system'
 jupyterhub::reverse_proxy_enable: false
 jupyterhub::reverse_proxy_origin: []
 jupyterhub::service_enable: true
 jupyterhub::service_ensure: running
 jupyterhub::service_manage: true
-jupyterhub::service_name: jupyterhub
-jupyterhub::ssl_cert: ~
+jupyterhub::service_name: 'jupyterhub'
 jupyterhub::ssl_enable: false
+jupyterhub::ssl_cert: ~
 jupyterhub::ssl_key: ~
 jupyterhub::sudospawner_allowed_users: []
+jupyterhub::sudospawner_enable: false 
 jupyterhub::sudospawner_debug_enable: false
-jupyterhub::sudospawner_enable: false
 jupyterhub::systemdspawner_cpu_limit: 'None'
 jupyterhub::systemdspawner_default_shell: ~
 jupyterhub::systemdspawner_enable: false
 jupyterhub::systemdspawner_isolate_devices: false
 jupyterhub::systemdspawner_isolate_tmp: false
-jupyterhub::systemdspawner_mem_limit: 'None'
-jupyterhub::systemdspawner_user_workingdir: /home/{USERNAME}
-jupyterhub::wrapspawner_enable: false
 ```
 
 ## Limitations
